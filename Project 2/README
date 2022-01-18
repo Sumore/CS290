@@ -1,1 +1,21 @@
 
+Assignment 2 (More HTML with CSS):
+
+Again create a design for a web app that you would want to use!
+Note: This can be a redesigned version of your first design.  I expect more details in these designs as we move forward.
+
+Create a simple webpage (HTML can be simple, but include enough to show off your CSS styles) that attempts to apply some 
+style from your design to the HTML; be sure to include at least the following CSS properties: class attribute, class selector, 
+id attribute, id selector, role attribute, attribute selectors, font family, font size, font style, font variant, font weight, 
+font property shorthand, text align, text decoration, line height, color (in a few ways), border and shorthand, padding and 
+shorthand, margin and shorthand.
+
+
+
+Although there aren't many changes to my inital design png, I believe the items being a bit more flushed out gave me ideas for how 
+I could better organize the page. I know it's simplistic and doesn't do much, but this week I was more worried about practising how 
+the pieces work together than modifying the code we wrote last week. In fact the table you'll notice is yours, however finding how to 
+integrate it, size it, and modify the borders proved an interesting challenge. Once again the layout.png will be in with the main folder. 
+I still can't get the visual embed to work in the README.
+
+I'm hoping this is what you were looking for, the assignement this week seems much more open ended than last.
