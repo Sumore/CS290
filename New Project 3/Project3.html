@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    background-color: rgb(143, 143, 148);
+}
+
+ul.topnav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #392ed4;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+ul.topnav li.right, 
+ul.topnav li {float: none;}
+}
+
+span {
+color: blue;
+}
+
+.extra span {
+color: inherit;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+float: right;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+
+
+
+
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #333;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    content: "/\00a0";
+}
+
+
+
+
+</style>
+
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<ul class="topnav">
+<li><a class="active" href="Project3.html">Home</a></li>
+<li><a href="another_page.html">Another Page</a></li>
+<li><a href="requirements.html">Requirments</a></li>
+<li class="right"><a href="#about">(If you collapse me, I'll change shape!)</a></li>
+<li class="right"><a href="sitemap.html">Sitemap</a></li>
+
+</ul>
+
+<div style="padding:0 16px;">
+
+<h1>
+    Read the README file for context <br>
+Check the "requirments" page for where to see each item needed for the assignement
+</h1>
+
+<h2>Joseph, seeing as how my goal is to slam-jam my way through these last few assigments there will be as little fluff as possible. I will save the time to make the final look good, and use these pages to just show off the basics of my understanding. </h2>
+
+<p></p>
+
+<div style="color: pink;">
+<p>This line is inheriting its pink color from the "div" around it and it useing span to color a certain <span>grouping of words blue.</span>.</p>
+<p></p>
+</div>
+</div>
+
+
+
+
+
+<h4>
+
+</h4>
+
+<button style="color: #111;" type="button" class="collapsible">Open this collapsable for float and clear</button>
+<div class="content">
+    <div class="float-left clear-right">
+        <p>I'm Floated left and Cleared Right</p>
+        <a id="ads" href="https://www.amazon.com/gp/bestsellers/industrial/6066129011">
+            <img alt="Qries" src="3D-Filamente.jpg"
+            width=250" height="250">
+        </a>
+        </div>
+        
+        <div class="float-right clear-left", id="size-id">
+        <p>and I'm Floated right and Cleared Left</p>
+        <a id="ads" href="https://www.amazon.com/3D-Printers/b?ie=UTF8&node=6066127011">
+            <img alt="Qries" src="printer.jpg"
+            width=250" height="250">
+        </a>
+        </div>
+</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "block";
+        }
+    });
+}
+</script>
+
+<ul class="breadcrumb", style="color: white;">
+    <li>Home</li>
+</ul>
+
+</body>
+</html>
