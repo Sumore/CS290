@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    background-color: rgb(143, 143, 148);
+}
+
+ul.topnav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #392ed4;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+ul.topnav li.right, 
+ul.topnav li {float: none;}
+}
+
+#fixed-text {
+    width: 1000px;
+    height: 1000px;
+
+}
+
+.dropbtn {
+    background-color: #392ed4;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#392ed4;}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #333;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    content: "/\00a0";
+}
+
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+<li><a href="Project3.html">Home</a></li>
+<li><a href="another_page.html">Another Page</a></li>
+<li><a class="active" href="requirements.html">Requirments</a></li>
+<li class="right"><a href="sitemap.html">Sitemap</a></li>
+</ul>
+
+
+<div id="fixed-text">
+<h2></h2>
+<p>Create yet another design for a web app that you would want to use... <br><br>
+
+    Create a web page that attempts to implement yet more aspects of your design, but now include additional CSS properties: background color, background image, overflow, box sizing, vendor prefix properties, float, inheritance, clear, collapsed containers (clearfix and overflow), position, z-index, display, fixed-width layout, fluid layout, and responsive layout, @media query, viewport, navigation list vertical and horizontal, breadcrumbs, drop down menu, sitemap, search boxes
+    
+    Remember to turn in a link to a repo or a copy of the website here on Moodle!</p>
+
+<ul>
+    <li>background color</li>
+    <ul>
+        <li>Set</li>
+    </ul>
+    <li>background image</li>
+    <ul>
+        <li>on "another page"</li>
+    </ul>
+    <li>overflow</li>
+    <ul>
+        <li>hidden used</li>
+    </ul>
+    <li>box sizing</li>
+    <ul>
+        <li>images forcibly resized on "home" page and "another page"</li>
+    </ul>
+    <li>vendor prefix properties</li>
+    <ul>
+        <li><a href="http://shouldiprefix.com/">I understand them, but none of the requirements appear to need them.</a></li>
+    </ul>
+    <li>float</li>
+    <ul>
+        <li>float shown on home page</li>
+    </ul>
+    <li>inheritance</li>
+    <ul>
+        <li>show in line on home page</li>
+    </ul>
+    <li>clear</li>
+    <ul>
+        <li>clear shown with float</li>
+    </ul>
+    <li>collapsed containers (clearfix and overflow)</li>
+    <ul>
+        <li>found on home page</li>
+    </ul>
+    <li>position</li>
+    <ul>
+        <li>photo on "another page" fixed to center page</li>
+    </ul>
+    <li>z-index</li>
+    <ul>
+        <li>and another photo pushed behind the first with z-back</li>
+    </ul>
+    <li>display</li>
+    <ul>
+        <li>display used in navbar and collapsable</li>
+    </ul>
+    <li>fixed-width layout</li>
+    <ul>
+        <li>I fixed this div box containing the requirements list so tyhat it doesnt move when the page is altered in size</li>
+    </ul>
+    <li>fluid layout</li>
+    <ul>
+        <li>the majority of this project is all in fluid layout, from the navbar to the page dimentions</li>
+    </ul>
+    <li>responsive layout</li>
+    <ul>
+        <li style="font-size:5vw">This text will change size with the viewport</li>
+    </ul>
+    <li>@media query</li>
+    <ul>
+        <li>used on the homepage for navbar collapse</li>
+    </ul>
+    <li>viewport</li>
+    <ul>
+        <li>" meta name="viewport" content="width=device-width, initial-scale=1" "</li>
+    </ul>
+    <li>navigation list vertical and horizontal</li>
+    <ul>
+        <li>navbar becomes vertical when window collapses</li>
+    </ul>
+    <li>breadcrumbs</li>
+    <ul>
+        <li>added breadcrumb on bottom of page for home and requirements page</li>
+    </ul>
+    <li>drop down menu</li>
+    <ul>
+        <li><div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="Project3.html">Home</a>
+                <a href="another_page.html">Another Page</a>
+                <a href="requirements.html">Requirments</a>
+            </div>
+        </div></li>
+    </ul>
+    <li>sitemap</li>
+    <ul>
+        <li>simple sitemap added to right side of nav bar</li>
+    </ul>
+    <li>search boxes</li>
+    <ul>
+        <li><input type="text" placeholder="Search.."> Doesn't do anything yet</li>
+    </ul>
+</ul>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<ul class="breadcrumb", style="color: white;">
+    <li><a href="Project3.html">Home</a></li>
+    <li><a href="requirements.html">Requirements</a></li>
+</ul>
+
+</body>
+</html>

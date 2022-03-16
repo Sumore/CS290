@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    background-image: url("3d-parinting.jpeg");
+}
+
+ul.topnav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #392ed4;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+ul.topnav li.right, 
+ul.topnav li {float: none;}
+}
+
+.fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #73AD21;
+}
+
+#z-back {
+    z-index: -1;
+}
+
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+<li><a href="Project3.html">Home</a></li>
+<li><a class="active" href="another_page.html">Another Page</a></li>
+<li><a href="requirements.html">Requirements</a></li>
+<li class="right"><a href="sitemap.html">Sitemap</a></li>
+</ul>
+
+<div>
+<h2></h2>
+<p></p>
+<p></p>
+<h4></h4>
+</div>
+
+<div class="fixed">
+<img alt="Qries" src="printer.jpg" width=250px" height="250px">
+</div>
+
+<div class="fixed", id="z-back">
+    <img alt="Qries" src="3D-Filamente.jpg" width=500px" height="500px">
+    </div>
+
+</body>
+</html>
