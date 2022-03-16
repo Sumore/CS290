@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="home_styles.css">
+
+<script src="p5.js"></script>
+<script src="p5.sound.js"></script>
+<script src="sketch.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<body>
+
+<ul class="topnav">
+<li><a class="active" href="Project4.html">Home</a></li>
+<li><a href="requirements.html">Requirments</a></li>
+
+
+</ul>
+
+<div style="padding:0 16px;">
+
+<h1>
+Keeping it super simple this time to just show off the Javascript portions. Once again, saving the "good looking" stuff for the final.
+</h1>
+
+<ul>
+    <li>Input (perhaps using an input element)</li>
+    <ul>
+        <li>
+            <form>
+            <input type="button" id="btn" value="Button #1">
+            </form>
+            <p>Click Button number 1, to disable Button #2</p>
+            <button onclick="disableElement()">Button #2</button>
+            <script>
+            function disableElement() {
+                document.getElementById("btn").disabled = true;
+                }
+            </script>
+        </li><br>
+    </ul>
+    <li>Output (maybe inside a < p > or in a fancier element)</li>
+    <ul><br>
+        <li>I like buttons, push this one for output.<button id='btn2'>Click Me</button>
+            <script>
+            function test() {
+                alert('Output!');
+            }
+            document.getElementById('btn2').onclick = test;
+            alert(sum);
+            </script>
+    </ul><br>
+    <li>Variables of a few datatypes (at least number, string, boolean, and a couple objects)</li>
+    <ul><br>
+
+        <script>
+            let ten = 10;
+            let count = 0;
+            while(++count < ten) {
+                count +=1;
+                console.log("Count: " + count);
+            }
+        </script>
+        <li>Number:<script>document.write(count);</script> Number variable has been counted from 0-11</li><br>
+        <script>
+            const str1 = "STR #1";
+            const str2 = "STR #2";
+        </script>
+        <li>String Concat example:  <script>document.write(str1.concat(' ', str2));  document.write(str2.concat(', ', str1));</script> Values have been swapped</li><br>
+        <script>
+        function change() {
+        document.getElementsByName("savereport")[0].value = 'True';
+        } 
+        </script>
+
+        <li>Boolean Checker:
+        <form name="test" method="post">
+            <input type="text" name="savereport" value="False" />
+        </form>
+        <button type="button" value="false" id="check" onclick="change()" >Click</button>
+        </li><br>
+        <script>
+            const pikachu = {name: "Pikachu", type:"Electric", evo:"1st Stage", weak:"Ground"};
+        </script>
+        <li>Objects: Listing 4 data points from an object
+            <br>Name: <script>document.write(pikachu.name);</script>
+            <br>Type: <script>document.write(pikachu.type);</script>
+            <br>Evolutionary Stage: <script>document.write(pikachu.evo);</script>
+            <br>Weakness: <script>document.write(pikachu.weak);</script>
+        </li><br>
+    </ul>
+    <li>Show off some common errors and how you might avoid them</li>
+    <ul>
+        <li>Example off the inadvertant creation of a new variable meant to just be used in a loop structure:
+            <script>
+            for (var j = 0; j < 11; j++) {
+                j = j + 1;
+                let i = 12
+                }
+                console.log ( j );
+                document.write(j);
+            </script>
+        </li>
+        <li>
+
+        </li>
+
+    </ul><br>
+    <li>
+    Conditionals: The following text will change based on your computers stated time.
+    <p id="demo"></p>
+        <script>
+            let hour = new Date().getHours();
+            let greeting;
+            if (hour < 20) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("demo").innerHTML = greeting;
+        </script>
+    </li>
+    <li>Repetition: The following String will be repeated 4 tmes.
+        <p id="hello"></p><br>
+        <script>
+            let text = "Hello world!";
+            let result = text.repeat(4);
+            
+            document.getElementById("hello").innerHTML = result;
+        
+            </script>
+    <li>Arrays: the following widget collects input and builds an array</li><br>
+    <script>
+        values = [];
+        
+        function addRecord() {
+        var inp = document.getElementById('inputtext');
+        values.push(inp.value);
+        inp.value = "";  
+        }
+        
+        function displayRecord() {
+        document.getElementById("values").innerHTML = values.join(", ");
+        }
+        </script>
+        
+        <table>
+            <tr>
+                <td>Enter the Input</td>
+                <td><input type="text" id="inputtext" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" id="add" onclick="addRecord();">Add </button>
+                <button type="button" id="display" onclick="displayRecord();">Display</button>
+                </td>
+            </tr>
+        </table>
+        
+        <div id='values'></div>
+    <ul>
+    </ul><br>
+    <li>Functions</li><br>
+    <ul>
+        <li>With each of the prior requirements a function was used to display a working understanding </li><br>
+    </ul>
+    <li>Demonstrate scope</li><br>
+    <ul>
+        <li>Global: At the beginning of this project i defined a variable "ten" and accidentaly made it global, now I can use it here:<script>document.write(ten);</script></li>
+        <li>Local: This line displays how the variable "J" used in common mistakes can be used here as a var <script>document.write(j);</script></li>
+        <li>Block: But the same function containing a "let" variable cannot be displayed here<script>document.write(i);</script></li>
+    </ul><br>
+    <script language="Javascript" type="text/Javascript">
+        <!--
+        function mouseoverevent()
+        {
+            alert("This is JavaTpoint");
+        }
+        //-->
+    </script>
+    <li>Objects and Events</li>
+    <p onmouseover="mouseoverevent()"> Mouse over this Line for "Mouseover Event"</p>
+    <ul>
+    </ul>
+    <li>Go find a JavaScript library that has some features that you think might be useful and be ready to discuss some of this with the class<br>
+
+        Attempt to use that library to create another page that demonstrates some key features of the library (perhaps by going through a tutorial for that library?)</li><br>
+    <ul>
+        <li><a href="sketch.html">Library Example</a></li>
+        <li>I got sketch.js up and running. It's not super critical as far as website tools go, but the integration is super simple. I didn't know this functionality existed in web-design, or that there were this many open source libraries to choose from.</li>
+    </ul>
+</ul>
+
+
+
+
+</body>
+
+
+</html>
+
+Referance Links<br>
+For My use:
+<br>
+<a href="https://www.w3schools.com/js/js_input_examples.asp">Input</a>
+<br>
+<a href="https://www.w3schools.com/js/js_output.asp">Output</a>
+<br>
+<a href="https://www.w3schools.com/js/js_datatypes.asp">Javascript Data Types</a>
+<br>
+<a href="https://www.w3schools.com/js/js_if_else.asp">Conditionals</a>
+<br>
+<a href="https://www.w3schools.com/jsref/jsref_repeat.asp">Repetition</a>
+<br>
+<a href="https://www.w3schools.com/js/js_arrays.asp">Arrays</a>
+<br>
+<a href="https://www.w3schools.com/js/js_functions.asp">Functions</a>
+<br>
+<a href="https://www.w3schools.com/js/js_scope.asp">Demonstrate Scope</a>
+<br>
+<a href="https://www.w3schools.com/js/js_events_examples.asp">Objects and Events</a>
+<br>
+<a href="https://p5js.org/libraries/">Javascript Library</a>
+
